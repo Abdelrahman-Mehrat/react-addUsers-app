@@ -1,0 +1,45 @@
+.switch-userForm-btn {
+  display: flex;
+  justify-content: center;
+}
+.switch-userForm-btn button {
+}
+.userForm-input {
+  width: 100%;
+  margin-top: 10px;
+  padding: 4px;
+  /* border-radius: 5px; */
+}
+
+.add-user-Btn,
+.switch-userForm-btn .openBtn,
+.switch-userForm-btn .closeBtn {
+  display: block;
+  border: none;
+  background: #ffdd00;
+  color: #000000;
+  font-weight: 100;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease 0s;
+}
+.switch-userForm-btn .closeBtn {
+  background: #8c081c;
+  color: #ffffff;
+}
+.closeBtn,
+.openBtn {
+  transition: all 0.3s ease 0s;
+}
+.add-user-Btn:hover {
+  color: #404040;
+  font-weight: 700;
+  letter-spacing: 3px;
+  /* background: none; */
+  opacity: 0.6;
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.3s ease 0s;
+}

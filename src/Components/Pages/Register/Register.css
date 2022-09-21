@@ -1,0 +1,17 @@
+.login-section .title {
+  border-bottom: 2px solid rgb(98, 7, 131);
+  color: rgb(98, 7, 131);
+  padding: 5px 20px;
+  width: fit-content;
+}
+.form-container {
+  display: flex;
+  justify-content: center;
+}
+.input-error{
+border-color: red;
+}
+.text-error{
+  color: red !important;
+  font-weight: bold;
+}
