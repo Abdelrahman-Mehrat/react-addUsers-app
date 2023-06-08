@@ -3,6 +3,10 @@
   color: white;
   position: relative;
 }
+.disabled{
+  pointer-events: none;
+  opacity: 0.5;
+}
 .fixed-nav::after {
   content: "";
   width: 100%;

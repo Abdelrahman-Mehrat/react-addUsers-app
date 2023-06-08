@@ -1,11 +1,12 @@
 import "./NavBarTitle.css";
 import { useContext, useEffect } from "react";
-import { LogUserContext } from "../Context/LogUserContext";
+import { LogUserContext } from "../../Context/LogUserContext";
 import { AiOutlineUser } from "react-icons/ai";
 import { Nav } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 const NavBarTitle = () => {
-  const { name,registerUser } = useContext(LogUserContext);
+  const { name,registerUser,isLogin } = useContext(LogUserContext);
+  
   return (
     <>
       <div className="fixed-nav">
@@ -21,10 +22,10 @@ const NavBarTitle = () => {
         <NavLink className="p-2 link mx-1" to={"/"}>
           home
         </NavLink>
-        <NavLink className="p-2 link mx-1" to={"/userprofile"}>
-          UserProfile
+        <NavLink className={`p-2 link mx-1 ${!isLogin && "disabled"}`} to={"/userprofile"}>
+          Your profile
         </NavLink>
-        <NavLink className="p-2 link mx-1" to={"/register"}>
+        <NavLink className={`p-2 link mx-1 ${isLogin && "disabled"}`} to={"/register"}>
           Register
         </NavLink>
       </Nav>

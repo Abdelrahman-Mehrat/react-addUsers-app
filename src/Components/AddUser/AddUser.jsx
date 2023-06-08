@@ -12,10 +12,7 @@ const AddUser = ({ handleAddUser, newUser, handleAddUserChange }) => {
   return (
     <div className="container mb-3">
       <div className="switch-userForm-btn ">
-        <button
-          className={!toggleForm ? "openBtn" : "closeBtn"}
-          onClick={handleForm}
-        >
+        <button className={!toggleForm ? "openBtn" : "closeBtn"} onClick={handleForm}>
           {!toggleForm ? `open form` : `close form`}
         </button>
       </div>

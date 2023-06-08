@@ -8,16 +8,26 @@
   width: 100%;
   margin-top: 10px;
   padding: 4px;
-  /* border-radius: 5px; */
+  background: #212529;
+  border: none;
+  box-shadow: 1px 1px 6px #606060;
+  border-radius: 5px;
+  min-height: 45px;
+  color: white;
 }
-
+.userForm{
+  background: #2c3034;
+  padding: 30px 10px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px #212529;
+}
 .add-user-Btn,
 .switch-userForm-btn .openBtn,
 .switch-userForm-btn .closeBtn {
   display: block;
   border: none;
-  background: #ffdd00;
-  color: #000000;
+  background: #620783;
+  color: #ffffff;
   font-weight: 100;
   padding: 10px 20px;
   text-transform: uppercase;

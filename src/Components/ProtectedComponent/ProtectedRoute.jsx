@@ -1,6 +1,6 @@
 import { useContext, useEffect } from "react";
 import { Navigate } from "react-router-dom";
-import { LogUserContext } from "../Context/LogUserContext";
+import { LogUserContext } from "../../Context/LogUserContext";
 const ProtectedRoute = (props) => {
   const { isLogin } = useContext(LogUserContext);
 

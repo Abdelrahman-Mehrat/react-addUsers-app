@@ -4,12 +4,12 @@ import "./UserProfile.css";
 const UserProfile = () => {
   const { registerUser, handleLogOut } = useContext(LogUserContext);
   return (
-    <div className="container">
+    <div className="welcome-message">
       <h3>
         Welcome
-        <span style={{ color: "#00ff58" }}> {registerUser.name}</span>{" "}
+        <span style={{ color: "rgb(98 7 131)",fontWeight:"bold" }}> {registerUser.name}</span>{" "}
       </h3>
-      <button onClick={handleLogOut}>Logout</button>
+      <button className="form-btn btn" onClick={handleLogOut}>Logout</button>
     </div>
   );
 };

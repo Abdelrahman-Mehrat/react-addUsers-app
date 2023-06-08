@@ -6,11 +6,11 @@ const LoginModal= ()=>{
     const [show, setShow] = useState(true);
     const handleClose = () => setShow(false);
     const RegisterLink= {
-        color: "#ecff35",
+        color: "white",
     fontWeight: "bold",
     borderRadius: "10px",
     textDecoration: "none",
-    backgroundColor: "#607d8b",
+    backgroundColor: "rgb(98, 7, 131)",
     padding: "10px"
     }
     return(
@@ -18,9 +18,8 @@ const LoginModal= ()=>{
         <Modal.Header closeButton>
           <Modal.Title>Hi!</Modal.Title>
         </Modal.Header>
-        <Modal.Body>If you want to modify user in the table <br/> Register please</Modal.Body>
+        <Modal.Body>If you want to add/update users in the table <br/> Register please</Modal.Body>
         <Modal.Footer>
-     
         <Link style={RegisterLink} to="/register"  onClick={handleClose}>Register</Link>
         </Modal.Footer>
       </Modal>

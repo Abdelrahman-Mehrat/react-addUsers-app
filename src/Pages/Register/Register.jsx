@@ -12,17 +12,17 @@ const Register = () => {
   const handleChangePassword = (e) => {
     setUserPassword(e.target.value);
   };
-  const { handleRegister, isLogin,checkUsers } = useContext(LogUserContext);
+  const { handleRegister, isLogin, checkUsers } = useContext(LogUserContext);
   const navigate = useNavigate();
   useEffect(() => {
     if (isLogin !== null) {
       navigate("/userprofile");
     }
   }, [isLogin]);
-  
+
   return (
     <section className="login-section">
-      <div className="container">
+      <div className="login-form">
         <h2 className="text-center title mx-auto">Register</h2>
         <div className="form-container">
           <Form
@@ -34,14 +34,14 @@ const Register = () => {
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label htmlFor="register-inputName">UserName</Form.Label>
               <Form.Control
-              className={checkUsers?"mb-3":"input-error mb-3" }
+                className={checkUsers ? "mb-3" : "input-error mb-3"}
                 type="text"
                 id="register-inputName"
                 placeholder="Enter userName"
                 value={userName}
                 onChange={handleChangeName}
               />
-                 <Form.Label htmlFor="register-inputPassword">Password</Form.Label>
+              <Form.Label htmlFor="register-inputPassword">Password</Form.Label>
               <Form.Control
                 type="password"
                 placeholder="Enter Password"
@@ -49,11 +49,11 @@ const Register = () => {
                 value={userPassword}
                 onChange={handleChangePassword}
               />
-              <Form.Text className={checkUsers?"text-muted":"text-muted text-error"}>
-                {checkUsers?"We'll never share your DATA with anyone else.":"this name already used"}
+              <Form.Text className={checkUsers ? "text-muted" : "text-muted text-error"}>
+                {checkUsers ? "We'll never share your information with anyone else." : "this name already used"}
               </Form.Text>
             </Form.Group>
-            <Button variant="primary" type="submit">
+            <Button className="form-btn" type="submit">
               Sign up
             </Button>
           </Form>

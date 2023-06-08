@@ -3,7 +3,7 @@ import { AiFillEdit } from "react-icons/ai";
 import { RiChatDeleteLine } from "react-icons/ri";
 import { Button } from "react-bootstrap";
 import "./SingleUser.css";
-import { LogUserContext } from "../Context/LogUserContext";
+import { LogUserContext } from "../../Context/LogUserContext";
 const SingleUser = ({
   user,
   HandleDelete,
@@ -76,7 +76,7 @@ const SingleUser = ({
         ) : (
           isLogin?
           <Button
-            className="mx-auto d-block"
+            className="mx-auto d-block update-buttons"
             onClick={() => {
               setToggleUpdate(!toggleUpdate);
             }}
@@ -89,7 +89,7 @@ const SingleUser = ({
       <td>
         {
             isLogin?
-        <Button className="mx-auto d-block" onClick={HandleDelete}>
+        <Button className="mx-auto d-block update-buttons" onClick={HandleDelete}>
           <RiChatDeleteLine />
         </Button>
             :

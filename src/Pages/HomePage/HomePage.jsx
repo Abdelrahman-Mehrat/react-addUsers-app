@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import MainContainer from "../../MainContainer/MainContainer";
-import AddUser from "../../AddUser/AddUser.jsx";
-import Button from 'react-bootstrap/Button';
+import MainContainer from "../../Components/MainContainer/MainContainer";
+import AddUser from "../../Components/AddUser/AddUser.jsx";
+import Button from "react-bootstrap/Button";
 
 import "./HomePage.css";
 const HomePage = () => {
@@ -52,15 +52,14 @@ const HomePage = () => {
       lname: "",
       email: "",
     });
-    localStorage.setItem("newUser-id", JSON.stringify(testId+1));
+    localStorage.setItem("newUser-id", JSON.stringify(testId + 1));
     setTestId(testId + 1);
     console.log(JSON.parse(localStorage.getItem("newUser-id")));
   };
   const handleAddUserChange = (e) => {
-    console.log(users[users.length - 1].id);
     setNewUser({
       ...newUser,
-      id: testId ,
+      id: testId,
       [e.target.name]: e.target.value,
     });
   };
@@ -78,16 +77,12 @@ const HomePage = () => {
     });
     setUsers(newState);
     localStorage.setItem("all-data", JSON.stringify(newState));
-    setUpdateUser(null)
+    setUpdateUser(null);
   };
   return (
     <div className="homePage-container">
-      <AddUser
-        handleAddUser={handleAddUser}
-        newUser={newUser}
-        handleAddUserChange={handleAddUserChange}
-      />
-      
+      <AddUser handleAddUser={handleAddUser} newUser={newUser} checkUser={users.length} handleAddUserChange={handleAddUserChange} />
+
       <MainContainer
         handleUpdateUserChange={handleUpdateUserChange}
         handleUpdateUser={handleUpdateUser}

@@ -1,0 +1,9 @@
+.no-users-message{
+    color: white;
+    width: fit-content;
+    padding: 10px 20px;
+    background-color: rgb(98, 7, 131);
+    min-width: 300px;
+    text-align: center;
+    border-bottom: 1px solid white;
+}
